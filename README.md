@@ -1,31 +1,42 @@
-Observações sobre o Código
+# Detecção de Faces com IA
 
-Importação de Bibliotecas:
+![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python&logoColor=white) ![Topic](https://img.shields.io/badge/Topic-computer-vision-green) ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-As bibliotecas cv2, numpy, DeepFace, requests, BytesIO, Image, e cv2_imshow estão importadas corretamente.
+## Descrição
 
-Carregamento de Imagem:
+Sistema de detecção e classificação facial usando OpenCV Haar Cascade para detecção e deep learning para classificação de idade, gênero, raça e emoção a partir de imagens via URL.
 
-A função load_image_from_url está bem estruturada, utilizando try...except para tratar erros ao baixar a imagem.
-O uso de response.raise_for_status() é uma boa prática, pois isso ajuda a detectar problemas imediatamente.
+## Funcionalidades
 
-Detecção de Faces:
+- Detecção de faces com OpenCV Haar Cascade
+- Classificação de idade, gênero, raça e emoção
+- Carregamento de imagens diretamente via URL
+- Pipeline completo de visão computacional
+- Visualização com bounding boxes e rótulos
 
-A função detect_faces utiliza cv2.CascadeClassifier para detectar faces, o que é uma abordagem padrão.
-A conversão para escala de cinza antes da detecção de faces é necessária e está implementada corretamente.
+## Stack Tecnológico
 
-Classificação de Faces:
+| Tecnologia | Descrição |
+|---|---|
+| Python | Linguagem principal |
+| OpenCV | Detecção de faces (Haar Cascade) |
+| DeepFace | Classificação de atributos faciais |
+| NumPy | Processamento de arrays de imagem |
 
-A função classify_faces utiliza o DeepFace para analisar as faces detectadas. O uso de DeepFace.analyze com várias ações é adequado.
+## Como Usar
 
-Exibição de Resultados:
+1. Instale as dependências: `pip install opencv-python deepface`
+2. Execute: `python detectar_faces.py`
+3. Informe a URL da imagem quando solicitado
 
-O código imprime o número de faces detectadas e as classificações de cada face, o que é bom para depuração e verificação.
-O uso de cv2_imshow para mostrar a imagem com as faces detectadas é apropriado para o Google Colab.
+## Estrutura de Pastas
 
-URLs de Imagem:
+```
+├── detectar_faces.py
+├── modelos/
+└── requirements.txt
+```
 
-A URL da imagem é um exemplo fixo. 
+---
 
-![image](https://github.com/user-attachments/assets/b1ec59bd-cc02-447d-a834-cbc6dcf0af74)
-
+> Feito com ❤️ por Rone Bragaglia · ML Engineer & Fundador CobrançaAuto
